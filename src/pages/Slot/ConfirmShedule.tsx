@@ -16,6 +16,7 @@ const PRIVATE_SLOT_URL_PARAMS = ["flightNumber", "aircraft", "origin", "destinat
 
 export default function ConfirmSchedule() {
     const { eventId, slotId } = useParams();
+    const scheduleConfirmMutation = useSlotBookMutation(SlotBookActions.CONFIRM);
     const bookMutation = useSlotBookMutation(SlotBookActions.BOOK);
     const [searchParams] = useSearchParams();
     const navigate = useNavigate();
@@ -49,13 +50,14 @@ export default function ConfirmSchedule() {
         const mutationParams = {
             slotId: Number(slotId),
             eventId: Number(eventId),
+
         }
 
         if (isPrivateSlot()) {
             const privateSlotData = extractSlotParamsFromUrl();
             bookMutation.mutate({ ...mutationParams, privateSlotData });
         } else {
-            bookMutation.mutate(mutationParams);
+            scheduleConfirmMutation.mutate(mutationParams);
         }
     }
 

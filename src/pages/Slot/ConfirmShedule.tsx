@@ -67,7 +67,7 @@ export default function ConfirmSchedule() {
       bookMutation.mutate({ ...mutationParams, privateSlotData });
     } else {
       scheduleConfirmMutation.mutate(mutationParams);
-      navigate("/slot/confirmed", {
+      navigate(`/event/${mutationParams.eventId}/my-slots`, {
         state: {
           eventId: scheduleConfirmMutation.variables?.eventId,
         },

@@ -71,7 +71,7 @@ const BoardingPassHeader: FunctionComponent<BoardingPassProps> = ({
       className={headerStyle.header}
     >
       <div>
-        <span>Cartão de Embarque</span>
+        <span>Tarjeta de Embarque</span>
         <span>Boarding Pass</span>
       </div>
       <div>
@@ -96,7 +96,7 @@ const BoardingPassLeftSide: FunctionComponent<BoardingPassProps> = ({
     <div>
       <div className={bodyStyle.passengerInfo}>
         <span>
-          <span>Nome/Name</span>
+          <span>Nombre/Name</span>
           <span>
             {user.lastName}, {user.firstName}
           </span>
@@ -112,8 +112,8 @@ const BoardingPassLeftSide: FunctionComponent<BoardingPassProps> = ({
         style={{ backgroundColor: themeColor, color: themeColor }}
         className={bodyStyle.flightHeader}
       >
-        <span>de/from</span>
-        <span>voo/flight</span>
+        <span>desde/from</span>
+        <span>vuelo/flight</span>
         <span>destino/arrival</span>
       </div>
       <div className={bodyStyle.flightInfo}>
@@ -122,11 +122,11 @@ const BoardingPassLeftSide: FunctionComponent<BoardingPassProps> = ({
             {origin.name}/{origin.iata}
           </div>
           <div className="font-header mt-auto">
-            <div className="font-light text-[0.56rem] leading-3">Data/Date</div>
+            <div className="font-light text-[0.56rem] leading-3">Fecha/Date</div>
             <div className="text-sm">{formatDate(eventStartDate)}</div>
           </div>
           <div className="font-header mt-auto">
-            <div className="font-light text-[0.56rem] leading-3">posição/stand</div>
+            <div className="font-light text-[0.56rem] leading-3">Posicion/stand</div>
             <div className="text-[2rem] leading-[2.6rem] font-extrabold">{gate}</div>
           </div>
         </div>
@@ -151,8 +151,8 @@ const BoardingPassLeftSide: FunctionComponent<BoardingPassProps> = ({
           </div>
           <div className={bodyStyle.qrCodeInfo}>
             <div className={bodyStyle.infoText}>
-              Para participar do evento você deve estar ciente e disposto a
-              cumprir todas as orientações disponíveis no briefing de piloto
+              Para participar en el evento debe conocer y estar dispuesto a cumplir
+              todas las reglas disponibles en el briefing de pilotos
             </div>
 
             <QrCode value="https://br.ivao.aero" size={76} renderAs="svg" />
@@ -175,7 +175,7 @@ const BoardingPassRightSide: FunctionComponent<BoardingPassProps> = ({
   return (
     <div className={bodyStyle.sideContent}>
       <div className={bodyStyle.passengerInfoSideBar}>
-        <div>nome/name</div>
+        <div>nombre/name</div>
         <div>
           {user.lastName}, {user.firstName}
         </div>
@@ -192,7 +192,7 @@ const BoardingPassRightSide: FunctionComponent<BoardingPassProps> = ({
       </div>
       <div className={bodyStyle.dateInfoSidebar}>
         <div>
-          <div>Data/Date</div>
+          <div>Fecha/Date</div>
           <div>{formatDate(eventStartDate)}</div>
         </div>
         <div>
@@ -208,7 +208,7 @@ const BoardingPassRightSide: FunctionComponent<BoardingPassProps> = ({
           <div>G1</div>
         </div>
         <div>
-          <div>Assento/Seat</div>
+          <div>Asiento/Seat</div>
           <div className="text-right">1A</div>
         </div>
       </div>

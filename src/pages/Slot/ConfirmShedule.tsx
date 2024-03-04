@@ -72,6 +72,16 @@ export default function ConfirmSchedule() {
     }, [bookMutation.isSuccess, bookMutation.variables, navigate]);
 
     useEffect(() => {
+        if(scheduleConfirmMutation.isSuccess) {
+            navigate("/slot/confirmed", {
+                state: {
+                    eventId: scheduleConfirmMutation.variables?.eventId
+                }
+            })
+        }
+    }, [scheduleConfirmMutation.isSuccess, scheduleConfirmMutation.variables, navigate])
+
+    useEffect(() => {
         if (bookMutation.isError) {
             const errorMessage = bookMutation.error.response?.data.error.message;
             const state: SlotsPageLocationState = {

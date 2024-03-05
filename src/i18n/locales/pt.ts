@@ -9,7 +9,7 @@ const ptTranslations: { translations: Translations } = {
       see: 'Visualizar'
     },
     footer: {
-      copyrightMessage: '© 2021 International Virtual Aviation Organisation - IVAO Brazil. All Rights Reserved.',
+      copyrightMessage: '© 2024 International Virtual Aviation Organisation - IVAO Brazil. All Rights Reserved.',
       privacyPolicyName: 'Política de Privacidade',
       termsOfUseName: 'Termos de uso',
     },

@@ -118,14 +118,6 @@ export default function ConfirmSchedule() {
               </MutedText>
             </div>
             <div className="mx-auto md:mx-0 mt-24 md:mt-12 w-full">
-              <div className="flex">
-                <div className="bg-orange px-5 py-7 rounded-l-lg text-white">
-                  <FiAlertTriangle size={43} />
-                </div>
-                <p className="bg-brown/10 text-orange dark:text-white py-2 pl-4 pr-3 rounded-r-lg text-sm">
-                  {t("notification.scheduleConfirmation.alert")}
-                </p>
-              </div>
 
               <div className="flex flex-col mt-12 md:flex-row space-y-4 md:space-y-0">
                 <div className="flex-1">

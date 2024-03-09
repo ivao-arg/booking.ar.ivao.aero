@@ -12,7 +12,7 @@ export const SidebarLayout: FunctionComponent = () => {
                 <EventSidebar />
             </div>
             <div className={`flex flex-col min-h-screen ${isAtEventDetailsPage ? "container lg:ml-32 2xl:ml-auto" : "lg:ml-28 w-full"}`}>
-                <main className="h-full">
+                <main className="h-full bg-[url(https://files.ar.ivao.aero/PR/Images/IVAO_AR_-_Anniversary_2024.jpg)]">
                     <Outlet />
                 </main>
                 {isAtEventDetailsPage && <Footer />}

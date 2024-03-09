@@ -93,7 +93,6 @@ export default function EventDetailsPage() {
 
 
     return (
-        <div className="w-full h-full min-h-screen bg-[url(https://files.ar.ivao.aero/PR/Images/IVAO_AR_-_Anniversary_2024.jpg)]">
             <div className="mt-[4.3rem]">
                 <div className="flex flex-col md:flex-row">
                     <div>
@@ -166,6 +165,5 @@ export default function EventDetailsPage() {
                     </div>
                 </div>
             </div >
-        </div>
     );
 }
